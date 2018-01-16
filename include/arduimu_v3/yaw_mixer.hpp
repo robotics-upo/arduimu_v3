@@ -1,8 +1,8 @@
 #ifndef __YAW_MIXER_HPP__
 #define __YAW_MIXER_HPP__
 
-#include <Eigen/Core>
-#include <Eigen/Dense>
+#include <eigen3/Eigen/Core>
+#include <eigen3/Eigen/Dense>
 
 //! @class This abstract class is intended to serve as base to estimate the yaw variable
 //!                   as a function of the gyro and ticks rate

@@ -1,8 +1,8 @@
 #ifndef __IMUFILTER_HPP__
 #define __IMUFILTER_HPP__
 
-#include <Eigen/Core>
-#include <Eigen/Dense>
+#include <eigen3/Eigen/Core>
+#include <eigen3/Eigen/Dense>
 #include <ros/ros.h>
 #include <sensor_msgs/Imu.h>
 #include <vector>

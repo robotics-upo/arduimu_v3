@@ -1,8 +1,8 @@
 #ifndef __YAW_MIXER_CHUR_HPP__
 #define __YAW_MIXER_CHUR_HPP__
 
-#include <Eigen/Core>
-#include <Eigen/Dense>
+#include <eigen3/Eigen/Core>
+#include <eigen3/Eigen/Dense>
 #include "yaw_mixer.hpp"
 
 //! @class This This class estimates the yaw angle by adding a k 
