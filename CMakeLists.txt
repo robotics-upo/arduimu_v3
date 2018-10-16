@@ -9,7 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
   tf
 )
 
-find_package(Eigen3 REQUIRED)
+# find_package(Eigen3 REQUIRED)
 
 catkin_package(
   INCLUDE_DIRS include
