@@ -14,7 +14,7 @@ find_package(Eigen3 REQUIRED)
 catkin_package(
   INCLUDE_DIRS include
   CATKIN_DEPENDS roscpp rospy std_msgs
-  DEPENDS eigen3
+  # DEPENDS eigen3
 )
 
 ###########
