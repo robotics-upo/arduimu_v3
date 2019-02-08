@@ -97,12 +97,14 @@ public:
 		// Parse message
 		if(size != 23 && size != 17)
 			return -1;
+		
+		// Here we make the adjustment from IMU reference frame to ROS base_link reference frame
 		data.time =  ((uint32_t *)m_readBuff)[0];
-		data.acc_x = -((int16_t *)m_readBuff)[2]/8192.0;
-		data.acc_y = -((int16_t *)m_readBuff)[3]/8192.0;
+		data.acc_x = ((int16_t *)m_readBuff)[3]/8192.0; 
+		data.acc_y = -((int16_t *)m_readBuff)[2]/8192.0;
 		data.acc_z = ((int16_t *)m_readBuff)[4]/8192.0;
-		data.gyr_x = -((int16_t *)m_readBuff)[5]/65.5;
-		data.gyr_y = -((int16_t *)m_readBuff)[6]/65.5;
+		data.gyr_x = ((int16_t *)m_readBuff)[6]/65.5;
+		data.gyr_y = -((int16_t *)m_readBuff)[5]/65.5;
 		data.gyr_z = ((int16_t *)m_readBuff)[7]/65.5;
 		data.mag_x = 0;
 		data.mag_y = 0;
@@ -111,8 +113,8 @@ public:
 		data.mag_update = false;
 		if(size == 23)
 		{
-			data.mag_x = -((int16_t *)m_readBuff)[8];
-			data.mag_y = -((int16_t *)m_readBuff)[9];
+			data.mag_x = ((int16_t *)m_readBuff)[9];
+			data.mag_y = -((int16_t *)m_readBuff)[8];
 			data.mag_z = ((int16_t *)m_readBuff)[10];
 			data.mag_update = true;
 		}
