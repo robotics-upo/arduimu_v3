@@ -42,7 +42,7 @@ protected:
 IMU::IMU(double rate):yaw_mixer_(NULL),rate_(rate), n_(), pn_("~"), init_(false)
 {
   
-  pn_.param<std::string>("imu_topic", imu_topic_, "/arduimu_v3/imu");
+  pn_.param<std::string>("imu_topic", imu_topic_, "arduimu_v3/imu");
   pn_.param<std::string>("yaw_mixer", yaw_mixer_type_, "Bias");
   
   

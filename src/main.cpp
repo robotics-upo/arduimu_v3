@@ -32,10 +32,10 @@ int main( int argc, char **argv)
 		use_mag = true;	
 		
 	// Advertise publishers
-	pubImuRaw = nh.advertise<sensor_msgs::Imu>("/arduimu_v3/imuRaw", 1);
-	pubMagRaw = nh.advertise<sensor_msgs::MagneticField>("/arduimu_v3/magRaw", 1);
+	pubImuRaw = nh.advertise<sensor_msgs::Imu>("arduimu_v3/imuRaw", 1);
+	pubMagRaw = nh.advertise<sensor_msgs::MagneticField>("arduimu_v3/magRaw", 1);
 	if(filter_imu)
-		pubImu = nh.advertise<sensor_msgs::Imu>("/arduimu_v3/imu", 1);
+		pubImu = nh.advertise<sensor_msgs::Imu>("arduimu_v3/imu", 1);
 	
 	// Setup IMU
 	ArduimuDev imuDev(device.c_str());
